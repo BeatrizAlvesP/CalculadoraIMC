@@ -1,0 +1,181 @@
+/* Reset de margem e padding e configuração da fonte global */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+}
+
+/* Estilo básico do corpo */
+body{
+    background-color: #090e22;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
+}
+
+/* Classe para esconder elementos */
+.hide{
+    display: none !important;
+
+}
+
+/* Estilo do contêiner principal */
+.container{
+    min-width: 400px;
+    min-height: 400px;
+    background-color: #1d1e33;
+    padding: 2rem;
+}
+
+/* Estilo do título da calculadora */
+#calc-container h2{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Estilos dos campos do formulário */
+.form-inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Controle de formulário (altura e peso) */
+.form-control{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-bottom: 1rem;
+
+}
+
+/* Estilo do rótulo dos campos de entrada */
+.form-control label{
+    font-weight: bold;
+    margin-bottom: 0.6rem;
+    color: #ccc;
+}
+
+/* Estilo do campo de entrada (input) */
+.form-control input{
+    padding: 1rem 0.5rem;
+}
+
+/* Controle dos botões */
+.action-control{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+/* Estilo básico dos botões */
+button{
+    text-transform: uppercase;
+    padding: 1rem 1.5rem;
+    background-color: #f44236;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    opacity: 0.9;
+    flex: 1;
+}
+
+/* Efeito hover nos botões */
+button:hover{
+    opacity: 1;
+}
+
+/* Estilo para o botão de limpar */
+#clean-btn{
+    background-color: #444;
+}
+
+/* Estilos do contêiner de resultados */
+#result-container{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* Estilo do valor de IMC exibido */
+#imc-number{
+    font-size: 2.4rem;
+    margin-bottom: 0.6rem;
+}
+
+
+/* Estilo da situação baseada no IMC */
+#imc-info{
+    font-size: 1.4rem;
+    color: #ccc;
+}
+
+/* Estilo do título da tabela */
+#result-container h3{
+    margin-top: 1rem;
+    color: #dfdfdf;
+}
+
+/* Estilo da tabela de classificações do IMC */
+#imc-table{
+    margin: 1.5rem 0;
+    font-size: 0.8rem;
+}
+
+/* Estilo do cabeçalho da tabela */
+.table-header{
+    font-weight: bold;
+    color: #ccc;
+}
+
+/* Configuração de layout da tabela */
+.table-header,
+.table-data{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #444;
+        
+}
+
+/* Tamanho dos elementos da tabela */
+.table-header h4,
+.table-data p{
+    flex: 1;
+}
+
+/* Limite de largura para a coluna de obesidade */
+.table-header h4:nth-child(3),
+.table-data p:nth-child(3){
+    max-width: 80px;
+
+}
+
+
+/* Estilo do botão de voltar */
+#back-btn{
+    align-self: center;
+}
+
+/* Estilos de cores baseados na situação do IMC */
+.good{
+    color: #12db34;
+}
+
+.low{
+    color: #dbce12;
+}
+
+.medium{
+    color: #db6212;
+}
+
+.high{
+    color: #db1912;
+}

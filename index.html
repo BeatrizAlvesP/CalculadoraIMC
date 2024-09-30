@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC</title>
+
+     <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Link para fontes do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Link para o arquivo JS externo, com defer para carregar após o HTML -->
+    <script src="js/app.js" defer></script>
+</head>
+
+<body>
+
+     <!-- Contêiner principal da página -->
+    <div class="container">
+
+        <!-- Seção da calculadora de IMC -->
+        <div id="calc-container" >
+            <h2>Calculadora IMC</h2>
+
+            <!-- Formulário para inserir altura e peso -->
+            <form id="imc-form">
+                <div class="form-inputs">
+
+                    <!-- Campo para inserir altura -->
+                    <div class="form-control">
+                        <label for="height">Altura:</label>
+                        <input type="text" name="height" id="height" placeholder="Exemplo 1.75" />
+                    </div>
+
+                    <!-- Campo para inserir peso -->
+                    <div class="form-control">
+                        <label for="weight">Peso:</label>
+                        <input type="text" name="weight" id="weight" placeholder="Exemplo 70.5 ou 80" />
+
+                    </div>
+                </div>
+
+                 <!-- Botões para calcular e limpar o formulário -->
+                <div class="action-control">
+                    <button id="calc-btn">Calcular</button>
+                    <button id="clear-btn">Limpar</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Contêiner de resultados, escondido inicialmente -->
+        <div id="result-container" class="hide">
+
+            <!-- Exibição do valor do IMC -->
+            <p id="imc-number">Seu IMC: <span></span></p>
+
+            <!-- Exibição da situação baseada no IMC -->
+            <p id="imc-info">Situação Atual: <span></span></p>
+            <h3>Confira as classificações:</h3>
+
+            <!-- Tabela com as classificações do IMC -->
+            <div id="imc-table">
+
+                <!-- Cabeçalho da tabela -->
+                <div class="table-header">
+                <h4>IMC</h4>
+                <h4>Classificação</h4>
+                <h4>Obesidade</h4>
+            </div>
+        </div>
+
+        <!-- Botão para voltar à calculadora -->
+        <button id="back-btn">Voltar</button>
+    </div>
+</body>
+
+</html>
